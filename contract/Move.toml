@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-payment="0x429a2ea89ca2833eced9a721a5c8b5a9575a5a5af5d30f93eb06a9275353aa0b"
+payment="0e9e490453722ac1e51ad9d27a867834a43f301f99d0f45b8bd1fb81b884a746"
 std = "0x1"
 aptos_std = "0x1"
 aptos_framework = "0x1"
@@ -13,15 +13,8 @@ aptos_token_objects = "0x4"
 
 [dev-addresses]
 
-[dependencies.AptosFramework]
-git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "main"
-subdir = "aptos-move/framework/aptos-framework"
-
-[dependencies.AptosTokenObjects]
-git = 'https://github.com/aptos-labs/aptos-core.git'
-rev='main'
-subdir = 'aptos-move/framework/aptos-token-objects'
-
+[dependencies]
+AptosFramework =  { git = "https://github.com/aptos-labs/aptos-core.git", rev = "mainnet" ,subdir = "aptos-move/framework/aptos-framework" }
+AptosToken = {git ="https://github.com/aptos-labs/aptos-core.git", rev="mainnet", subdir = "aptos-move/framework/aptos-token"}
 
 [dev-dependencies]
