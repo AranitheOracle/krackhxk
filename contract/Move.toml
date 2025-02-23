@@ -3,7 +3,7 @@ name = 'nft-ticket'
 version = '1.0.0'
 
 [addresses]
-NftTicket = "_"
+NftTicket = "54ece0cc6c1a47b8994d66f0e729bcab0b14fd7fa39b678b407f47115441a468"
 
 [dependencies]
 AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev="devnet"}
