@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
 export default function Home() {
   return (
     <div className="relative min-h-screen text-white" style={{ fontFamily: "Neue Haas Grotesk, sans-serif" }}>
@@ -68,7 +68,7 @@ export default function Home() {
             Help
           </a>
         </nav>
-
+        <WalletSelector />
         {/* Auth buttons */}
         <div className="flex space-x-4">
           <button className="px-4 py-2 border border-[#54A388] rounded hover:bg-[#54A388] hover:text-black transition">
