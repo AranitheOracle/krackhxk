@@ -18,10 +18,16 @@ const EventList: React.FC = () => {
   // Retrieve events from the store as EventType[]
   const events: EventType[] = useEventStore((state) => state.events as EventType[]);
 
-  const handleBuy = (id: number, seats: number) => {
-    router.push(`/eventList/payment/${id}?id=${id}&seats=${seats}`);
+  /**
+   * Navigate to the payment page, using the event ID as part of the dynamic route
+   * and passing the seats via query parameter.
+   * Example final URL: /eventList/payment/123?seats=10
+   */
+  const handleBookTicket = (id: number, seats: number) => {
+    router.push(`/eventList/payment/${id}?seats=${seats}`);
   };
 
+  // Filter logic
   const filteredEvents = events.filter((event) => {
     const eventDate = new Date(event.date);
     const matchesSearch = searchQuery
@@ -57,6 +63,7 @@ const EventList: React.FC = () => {
           </button>
         </div>
       </div>
+
       {searchVisible && (
         <input
           type="text"
@@ -66,6 +73,7 @@ const EventList: React.FC = () => {
           className="w-full p-2 rounded-md border border-gray-300 text-black focus:outline-none mb-4"
         />
       )}
+
       {filterVisible && (
         <div className="bg-[#161316] p-4 rounded-md mb-4 border border-gray-500">
           <h2 className="text-lg font-medium mb-2">Filter by:</h2>
@@ -90,6 +98,7 @@ const EventList: React.FC = () => {
           </div>
         </div>
       )}
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredEvents.map((event) => (
           <motion.div
@@ -122,10 +131,10 @@ const EventList: React.FC = () => {
                   Seats Left: {event.remainingSeats}
                 </p>
                 <button
-                  onClick={() => handleBuy(event.id, event.remainingSeats)}
-                  className="mt-4 w-full text-center bg-red-500 hover:bg-red-600 p-2 rounded"
+                  onClick={() => handleBookTicket(event.id, event.remainingSeats)}
+                  className="mt-4 w-full text-center bg-blue-500 hover:bg-blue-600 p-2 rounded"
                 >
-                  Delete
+                  Book Ticket
                 </button>
               </div>
             </div>

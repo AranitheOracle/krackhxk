@@ -2,16 +2,20 @@
 
 import { motion } from "framer-motion";
 import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
+
 export default function Home() {
   return (
-    <div className="relative min-h-screen text-white" style={{ fontFamily: "Neue Haas Grotesk, sans-serif" }}>
+    <div
+      className="relative min-h-screen text-white"
+      style={{ fontFamily: "Neue Haas Grotesk, sans-serif" }}
+    >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0E1E21] to-[#161316] z-0" />
 
-      {/* 
-        SIDE NAVBAR 
-        - Hover on the extreme left side to expand.
-        - Uses Montserrat for a distinct, modern look.
+      {/*
+        SIDE NAVBAR
+        - Expands on hover.
+        - Moved the wallet connect button (WalletSelector) to the bottom.
       */}
       <div
         className="group fixed top-0 left-0 h-screen z-50 w-4 hover:w-64 transition-all duration-300 bg-[#0E1E21]/60 backdrop-blur-md text-white"
@@ -25,7 +29,10 @@ export default function Home() {
             <a href="/eventList" className="hover:text-[#54A388] transition">
               Event List
             </a>
-            <a href="/ResaleMarketplace" className="hover:text-[#54A388] transition">
+            <a
+              href="/ResaleMarketplace"
+              className="hover:text-[#54A388] transition"
+            >
               Resale Marketplace
             </a>
             <a href="/mytickets" className="hover:text-[#54A388] transition">
@@ -33,19 +40,14 @@ export default function Home() {
             </a>
           </nav>
 
-          {/* Auth buttons at the bottom */}
+          {/* Connect Wallet at the bottom */}
           <div className="mt-auto flex flex-col space-y-2">
-            <button className="px-4 py-2 border border-[#54A388] rounded hover:bg-[#54A388] hover:text-black transition">
-              Sign In
-            </button>
-            <button className="px-4 py-2 bg-[#54A388] text-black rounded hover:bg-[#3c8d6e] transition">
-              Sign Up
-            </button>
+            <WalletSelector />
           </div>
         </div>
       </div>
 
-      {/* TOP NAVBAR (with Montserrat) */}
+      {/* TOP NAVBAR (no Sign In / Sign Up, just brand and example links) */}
       <header
         className="relative flex items-center justify-between px-8 py-4 z-10 bg-[#0E1E21]/60 backdrop-blur-md rounded-b-md"
         style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -68,16 +70,6 @@ export default function Home() {
             Help
           </a>
         </nav>
-        <WalletSelector />
-        {/* Auth buttons */}
-        <div className="flex space-x-4">
-          <button className="px-4 py-2 border border-[#54A388] rounded hover:bg-[#54A388] hover:text-black transition">
-            Sign In
-          </button>
-          <button className="px-4 py-2 bg-[#54A388] text-black rounded hover:bg-[#3c8d6e] transition">
-            Sign Up
-          </button>
-        </div>
       </header>
 
       {/* HERO SECTION */}
@@ -97,7 +89,9 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          A blockchain-powered ticketing platform where each ticket is an NFT, ensuring authenticity, preventing scalping, and enabling fair resale with enforced royalties.
+          A blockchain-powered ticketing platform where each ticket is an NFT,
+          ensuring authenticity, preventing scalping, and enabling fair resale
+          with enforced royalties.
         </motion.h2>
       </main>
 
@@ -139,29 +133,6 @@ export default function Home() {
           </motion.h3>
           <p className="text-gray-200">Transactions</p>
         </div>
-      </section>
-
-      {/* TRANSACTION CARD IMAGE SECTION */}
-      <section className="relative flex justify-center px-8 pb-20 z-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="w-full max-w-4xl overflow-hidden"
-          style={{
-            maskImage:
-              "radial-gradient(ellipse at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
-            WebkitMaskImage:
-              "radial-gradient(ellipse at center, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
-          }}
-        >
-          <img
-            src="/aquaFiCard.png"
-            alt="Transaction Card"
-            className="w-full object-cover"
-          />
-        </motion.div>
       </section>
     </div>
   );
