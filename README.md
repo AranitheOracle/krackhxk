@@ -130,7 +130,7 @@ aptos move publish
 - Access control and security
 
 ## Project Structure
-
+```
 krackhxk/
 ├── frontend/
 │   └── my-next-app/
@@ -165,7 +165,7 @@ krackhxk/
 └── contract/
     └── sources/
         └── nftTicket.move
-
+```
 
 
 ### Directory Structure Explanation
