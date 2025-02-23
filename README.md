@@ -131,14 +131,13 @@ aptos move publish
 
 ## Project Structure
 
-
-/home/rohit/krackhxk/
+krackhxk/
 ├── frontend/
 │   └── my-next-app/
 │       ├── public/
 │       │   ├── images/
-│       │   ├── event1.jpg
-│       │   └── aquaFiCard.png
+│       │   │   ├── event1.jpg
+│       │   │   └── aquaFiCard.png
 │       └── src/
 │           ├── app/
 │           │   ├── eventList/
@@ -166,6 +165,7 @@ aptos move publish
 └── contract/
     └── sources/
         └── nftTicket.move
+
 
 
 ### Directory Structure Explanation
