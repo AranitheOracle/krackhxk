@@ -9,21 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.35.0",
     "@aptos-labs/wallet-adapter-ant-design": "^4.0.3",
     "@aptos-labs/wallet-adapter-react": "^4.1.0",
     "framer-motion": "^12.4.7",
     "next": "15.1.7",
     "petra-plugin-wallet-adapter": "^0.4.5",
-    "react": "^18.3.1",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.2.0",
     "react-datepicker": "^8.1.0",
-<<<<<<< HEAD
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.5.0"
-=======
-    "react-dom": "^19.0.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "zustand": "^5.0.3"
->>>>>>> 11dac01da9fd2543cee714d030fb16ed76152650
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
