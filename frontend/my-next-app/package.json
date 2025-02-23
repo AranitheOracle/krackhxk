@@ -16,8 +16,14 @@
     "petra-plugin-wallet-adapter": "^0.4.5",
     "react": "^18.3.1",
     "react-datepicker": "^8.1.0",
+<<<<<<< HEAD
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0"
+=======
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "zustand": "^5.0.3"
+>>>>>>> 11dac01da9fd2543cee714d030fb16ed76152650
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
