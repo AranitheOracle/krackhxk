@@ -1,20 +1,10 @@
 [package]
-name = "payment"
-version = "1.0.0"
-authors = []
+name = 'nft-ticket'
+version = '1.0.0'
 
 [addresses]
-payment="0e9e490453722ac1e51ad9d27a867834a43f301f99d0f45b8bd1fb81b884a746"
-std = "0x1"
-aptos_std = "0x1"
-aptos_framework = "0x1"
-aptos_token_objects = "0x4"
-
-
-[dev-addresses]
+NftTicket = "_"
 
 [dependencies]
-AptosFramework =  { git = "https://github.com/aptos-labs/aptos-core.git", rev = "mainnet" ,subdir = "aptos-move/framework/aptos-framework" }
-AptosToken = {git ="https://github.com/aptos-labs/aptos-core.git", rev="mainnet", subdir = "aptos-move/framework/aptos-token"}
-
-[dev-dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev="devnet"}
+AptosToken = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-token/", rev="devnet"}
